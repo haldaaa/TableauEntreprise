@@ -7,11 +7,10 @@
     <title>My first React app (mais d'abord en php LOL!)</title>
   </head>
   <body>
-  
-
+    <?php include("php/connexionbdd.php")?>
     <div class="content">
         <div class="enonce">
-      <h1> Let's go </h1>
+
       <h2>- Objectif </h2>
         <p> Enoncé :<br>
         Créé liste de vente dans une grille avec : <br>
@@ -27,9 +26,11 @@
         Pour commencer, les données seront statiques dans une base. <br>
         Ensuite, on pourra créé un tableau en ajoutant nous même les données. <br>
         Enfin, reproduire le shéma en Javascript pour que les changement se fasse en direct
-        </p> <br>
+      </p> <br> <br> <br>
         </div>
-        <div class="tableau">
+
+        <h1> Premier tableau statique </h1>
+        <div class="tableau_1">
           <table class="table">
             <thead>
               <tr>
