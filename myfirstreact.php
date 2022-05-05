@@ -7,7 +7,7 @@
     <title>My first React app (mais d'abord en php LOL!)</title>
   </head>
   <body>
-    <?php include("php/connexionbdd.php")?>
+  
 
     <div class="content">
         <div class="enonce">

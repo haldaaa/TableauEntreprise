@@ -5,9 +5,14 @@ body{
 
 h1{
   text-align: center;
-  
+
 }
 
 .content{
   margin:5%;
+}
+
+
+.tableau{
+  margin-top:5%;
 }
