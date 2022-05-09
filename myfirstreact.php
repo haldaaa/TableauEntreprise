@@ -8,25 +8,50 @@
   </head>
   <body>
     <?php include("php/connexionbdd.php")?>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Acceuil </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="php/formulaire.php">Remplir le formulaire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
     <div class="content">
+
         <div class="enonce">
 
-      <h2>- Objectif </h2>
-        <p> Enoncé :<br>
-        Créé liste de vente dans une grille avec : <br>
-        <ol>
-          <li>- date </li>
-          <li>- code produit </li>
-          <li>- libellée produit </li>
-          <li>- montant HT </li>
-          <li>- montant AT </li>
-          <li>- nom du commercial </li>
-          <li>- secteur </li>
-        </ol> <br>
-        Pour commencer, les données seront statiques dans une base. <br>
-        Ensuite, on pourra créé un tableau en ajoutant nous même les données. <br>
-        Enfin, reproduire le shéma en Javascript pour que les changement se fasse en direct
+          <h2>- Objectif ?? </h2>
+            <p> Enoncé :<br>
+              Créé liste de vente dans une grille avec : <br>
+              <ol>
+                <li>- date </li>
+                <li>- code produit </li>
+                <li>- libellée produit </li>
+                <li>- montant HT </li>
+                <li>- montant AT </li>
+                <li>- nom du commercial </li>
+                <li>- secteur </li>
+              </ol> <br>
+              Pour commencer, les données seront statiques dans une base. <br>
+              Ensuite, on pourra créé un tableau en ajoutant nous même les données. <br>
+              Enfin, reproduire le shéma en Javascript pour que les changement se fasse en direct
       </p> <br> <br> <br>
+
         </div>
 
         <h1> Premier tableau statique </h1>
