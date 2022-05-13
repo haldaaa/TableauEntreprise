@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="php/formulaire.php">Remplir le formulaire</a>
+          <a class="nav-link" href="php/form.php">Remplir le formulaire</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>

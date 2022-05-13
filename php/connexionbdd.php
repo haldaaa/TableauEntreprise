@@ -1,5 +1,5 @@
 <?php
-  echo "Yo";
+  echo "I'm Php";
   $servername='localhost';
   $username='root';
   $password='';
