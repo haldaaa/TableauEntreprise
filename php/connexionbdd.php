@@ -1,17 +1,26 @@
 <?php
   # Variables global
-  $servername='localhost';
+  $servername='mysql:dbname=tableau;host=127.0.0.1';
   $username='root';
   $password='';
+  $dbname="tableau";
 
-  # Connexion BDD
-  $connexion= new mysqli($servername, $username, $password);
+  $connexion = new PDO($servername, $username, $password);
 
-  if($connexion->connect_error){
-    die('Erreur :' .$conn->connect_error);
-    echo 'Connexion OK';
-  }
 
    # Requête pour afficher les commercials dans le select du fichier form.php
 
+   $nom_commercial = $connexion -> query("SELECT prenom FROM commercial") ;
+   $nom_commercial2 = $nom_commercial -> fetchAll();
+
+
+
+
+   // foreach($nom_commercial2 as $row)
+   //                      {
+   //                          //print_r($row);
+   //                          echo $row[0] ;
+   //                      }
+
+   // echo "Im php";
  ?>

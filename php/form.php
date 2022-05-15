@@ -42,7 +42,7 @@
     </nav>
 
     <div class="content">
-        <form>
+        <form name="formulaire_tableau" method="post" action="#">
           <div class="form-group col-md-3 mx-auto">
             <div class="form-group">
               <label for="date_commande">Date de la commande</label>
@@ -75,22 +75,31 @@
 
           <div class="form-group col-md-3 mx-auto">
             <label for="exampleInputPassword1">Nom Commercial</label>
-            <input type="number" class="form-control" id="montant_tc" placeholder="">
+            <input type="text" class="form-control" id="montant_tc" placeholder="">
           </div> <br>
 
+          <div class="col-md-3 mx-auto">
+                    <select name="select_box" class="form-select " id="select_box">
+                        <option value="commercial">Commercial </option>
+                        <?php
+                          foreach($nom_commercial2 as $row)
+                          {
+                              print_r('<option value="'.$row[0].'"> '.$row[0].' </option>');
+                          }
+                        ?>
+                    </select>
+          </div> <br>
 
-
-          <div class="form-group form-check mx-auto">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <div class="form-group col-md-3 form-check mx-auto divSubmit">
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+
         </form>
 
 
 
     </div>
-    <span id="id_cible">Survoler ici</span>
+
 
     <!-- Extension jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

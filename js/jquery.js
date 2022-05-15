@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
-  console.log("please marche");
-  alert('ALERT');
+  //console.log("please marche");
+  //alert('ALERT');
 
   // ACTIVATION DU DATEPICKER
     $('.datepicker').datepicker({
