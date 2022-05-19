@@ -42,12 +42,12 @@
     </nav>
 
     <div class="content">
-        <form name="formulaire_tableau" method="post" action="#">
+        <form name="formulaire_tableau" method="post" enctype="multipart/form-data" action="validation_formulaire.php">
           <div class="form-group col-md-3 mx-auto">
             <div class="form-group">
               <label for="date_commande">Date de la commande</label>
                 <div class="datepicker date input-group shadow-sm">
-                  <input type="text" placeholder="Choisir une date" class="form-control py-2 px-2" id="date_commande">
+                  <input type="text" placeholder="Choisir une date" class="form-control py-2 px-2" name="date_commande">
                     <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
                 </div>
              </div>
@@ -55,39 +55,51 @@
 
           <div class="form-group col-md-3 mx-auto">
             <label for="exampleInputPassword1">Code produit</label>
-            <input type="number" class="form-control" id="code_produit" placeholder="123456">
+            <input type="number" class="form-control" id="code_produit" name="code_produit" maxlength=8 placeholder="123456">
           </div> <br>
 
           <div class="form-group col-md-3 mx-auto">
-            <label for="exampleInputPassword1">Libellé produit</label>
-            <input type="text" class="form-control" id="libellé_produit" placeholder="Formation, prestation, service...">
+            <label for="libelle_produit">Libellé produit</label>
+            <select name="libelle_produit" class="form-select " id="select_box">
+              <option value="chene"> Chêne </option>
+              <option value="peuplier"> Peuplier </option>
+              <option value="hetre"> Hêtre </option>
+            </select>
           </div> <br>
 
-          <div class="form-group col-md-3 mx-auto">
+          <div class="form-group col-md-3 mx-auto montant_ht_div">
             <label for="exampleInputPassword1">Montant HT</label>
-            <input type="number" class="form-control" id="montant_ht" placeholder="60000">
+            <input type="number" value="0" class="form-control" name="montant_ht" placeholder="60000">
           </div> <br>
 
-          <div class="form-group col-md-3 mx-auto">
+          <div class="form-group col-md-3 mx-auto" id="montant_tc_div">
             <label for="exampleInputPassword1">Montant TC</label>
-            <input type="number" class="form-control" id="montant_tc" placeholder="">
+            <input type="number" value="0" class="form-control" name="montant_tc" placeholder="">
           </div> <br>
 
           <div class="form-group col-md-3 mx-auto">
-            <label for="exampleInputPassword1">Nom Commercial</label>
-            <input type="text" class="form-control" id="montant_tc" placeholder="">
+            <label for="exampleInputPassword1">Ville</label>
+            <select name="select_ville" class="form-select " id="select_box">
+                <option value="commercial">Ville </option>
+                <?php
+                  foreach($ville2 as $row)
+                  {
+                      print_r('<option value="'.$row[0].'"> '.$row[0].' </option>');
+                  }
+                ?>
+            </select>
           </div> <br>
 
           <div class="col-md-3 mx-auto">
-                    <select name="select_box" class="form-select " id="select_box">
-                        <option value="commercial">Commercial </option>
-                        <?php
-                          foreach($nom_commercial2 as $row)
-                          {
-                              print_r('<option value="'.$row[0].'"> '.$row[0].' </option>');
-                          }
-                        ?>
-                    </select>
+            <select name="select_commercial" class="form-select " id="select_box">
+                <option value="commercial">Commercial </option>
+                  <?php
+                    foreach($nom_commercial2 as $row)
+                      {
+                        print_r('<option value="'.$row[0].'"> '.$row[0].' </option>');
+                      }
+                  ?>
+              </select>
           </div> <br>
 
           <div class="form-group col-md-3 form-check mx-auto divSubmit">
